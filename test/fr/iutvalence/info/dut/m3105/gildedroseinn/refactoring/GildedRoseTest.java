@@ -7,9 +7,12 @@ import org.junit.Test;
 public class GildedRoseTest
 {
 	@Test
-	public void aSimpleBeginningTest()
+	public void getSellInTest()
 	{
-		assertEquals(true,false);
+		Item item = new Item("item1", 10, 12);
+		assertEquals(item.getSellIn(),10);
 	}
+	
+
 
 }
