@@ -13,7 +13,7 @@ public class GildedRoseTest
 	private ArrayList<Item> listItems;
 	
 	@Test
-	public void updateItemsTest() 
+	public void updateItemsSellInTest() 
 	{
 		GildedRose.updateItems(listItems);
 		for (Item item : listItems)
@@ -21,6 +21,25 @@ public class GildedRoseTest
 			assertEquals(item.getSellIn(), 9);
 		}
 	}
+	
+	@Test
+	public void updateItemsQualityTest() 
+	{
+		GildedRose.updateQuality(listItems);
+		for (Item item : listItems)
+		{
+			if (item.getSellIn()==0)
+			{
+				assertEquals(item.getQuality(), 10);
+			}
+			else
+			{
+				assertEquals(item.getQuality(), 12);
+			}
+			
+		}
+	}
+	
 	
 	@Before
 	public void newListItem()
