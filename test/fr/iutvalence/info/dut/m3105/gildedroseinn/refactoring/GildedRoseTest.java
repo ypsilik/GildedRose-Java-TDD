@@ -13,6 +13,11 @@ public class GildedRoseTest
 		assertEquals(item.getSellIn(),10);
 	}
 	
-
+	@Test
+	public void getNameTest()
+	{
+		Item item = new Item("item1", 10, 12);
+		assertEquals(item.getName(), "item1");
+	}
 
 }
