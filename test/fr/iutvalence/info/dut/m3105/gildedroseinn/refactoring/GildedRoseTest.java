@@ -6,18 +6,24 @@ import org.junit.Test;
 
 public class GildedRoseTest
 {
+	private Item item;
 	@Test
 	public void getSellInTest()
 	{
-		Item item = new Item("item1", 10, 12);
+		newItem();
 		assertEquals(item.getSellIn(),10);
 	}
 	
 	@Test
 	public void getNameTest()
 	{
-		Item item = new Item("item1", 10, 12);
+		newItem();
 		assertEquals(item.getName(), "item1");
+	}
+
+	private void newItem()
+	{
+		this.item = new Item("item1", 10, 12);
 	}
 
 }
