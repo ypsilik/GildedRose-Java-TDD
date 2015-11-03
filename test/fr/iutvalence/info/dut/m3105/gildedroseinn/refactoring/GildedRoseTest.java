@@ -20,6 +20,14 @@ public class GildedRoseTest
 		newItem();
 		assertEquals(item.getName(), "item1");
 	}
+	
+	@Test
+	public void getQualityTest()
+	{
+		newItem();
+		assertEquals(item.getQuality(), 12);
+	}
+	
 
 	private void newItem()
 	{
